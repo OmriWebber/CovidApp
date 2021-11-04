@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include "admin_login.h"
+#include "user_registration.h"
+#include "user.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -27,5 +29,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     AdminLogin *al;
+    User_Registration *ur;
 };
 #endif // MAINWINDOW_H
