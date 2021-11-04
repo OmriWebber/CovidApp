@@ -9,16 +9,28 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    admin_login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    user.cpp \
+    user_registration.cpp
 
 HEADERS += \
-    mainwindow.h
+    admin_login.h \
+    mainwindow.h \
+    user.h \
+    user_registration.h
 
 FORMS += \
-    mainwindow.ui
+    admin_login.ui \
+    mainwindow.ui \
+    user_registration.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    admin.txt \
+    user.txt
