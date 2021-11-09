@@ -71,6 +71,9 @@
    <property name="text">
     <string>Login</string>
    </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
