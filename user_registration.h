@@ -14,7 +14,7 @@ class User_Registration : public QDialog
     Q_OBJECT
 
 public:
-    explicit User_Registration(User*& newUser, QWidget *parent = nullptr);
+    explicit User_Registration(QWidget *parent = nullptr);
     ~User_Registration();
 
     void Register();
@@ -26,7 +26,6 @@ private slots:
 
 private:
     Ui::User_Registration *ui;
-    User** newUser;
     QString imageFilePath;
 };
 

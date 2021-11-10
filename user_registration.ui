@@ -46,8 +46,8 @@
    <widget class="QLineEdit" name="input_fullname">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>110</y>
+      <x>310</x>
+      <y>120</y>
       <width>291</width>
       <height>31</height>
      </rect>
@@ -61,8 +61,8 @@
    <widget class="QLabel" name="label_fullname">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>120</y>
+      <x>180</x>
+      <y>130</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -79,8 +79,8 @@
    <widget class="QLabel" name="label_dob">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>170</y>
+      <x>180</x>
+      <y>180</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -97,8 +97,8 @@
    <widget class="QLineEdit" name="input_dob_day">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>160</y>
+      <x>310</x>
+      <y>170</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -118,8 +118,8 @@
    <widget class="QLineEdit" name="input_dob_month">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>160</y>
+      <x>410</x>
+      <y>170</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -139,8 +139,8 @@
    <widget class="QLineEdit" name="input_dob_year">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>160</y>
+      <x>510</x>
+      <y>170</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -166,8 +166,8 @@
    <widget class="QLineEdit" name="input_address">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>210</y>
+      <x>310</x>
+      <y>220</y>
       <width>291</width>
       <height>31</height>
      </rect>
@@ -181,8 +181,8 @@
    <widget class="QLabel" name="label_address">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>220</y>
+      <x>180</x>
+      <y>230</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -199,8 +199,8 @@
    <widget class="QLabel" name="label_phone">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>270</y>
+      <x>180</x>
+      <y>280</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -217,8 +217,8 @@
    <widget class="QLineEdit" name="input_phone">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>260</y>
+      <x>310</x>
+      <y>270</y>
       <width>291</width>
       <height>31</height>
      </rect>
@@ -340,8 +340,8 @@
       <rect>
        <x>470</x>
        <y>10</y>
-       <width>91</width>
-       <height>16</height>
+       <width>121</width>
+       <height>20</height>
       </rect>
      </property>
      <property name="text">
@@ -428,8 +428,8 @@
    <widget class="QLineEdit" name="input_password">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>60</y>
+      <x>310</x>
+      <y>70</y>
       <width>291</width>
       <height>31</height>
      </rect>
@@ -446,8 +446,8 @@
    <widget class="QLabel" name="label_fullname_2">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>70</y>
+      <x>180</x>
+      <y>80</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -464,8 +464,8 @@
    <widget class="QLabel" name="label_fullname_3">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>20</y>
+      <x>180</x>
+      <y>30</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -482,8 +482,8 @@
    <widget class="QLineEdit" name="input_username">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>10</y>
+      <x>310</x>
+      <y>20</y>
       <width>291</width>
       <height>31</height>
      </rect>
@@ -494,6 +494,27 @@
      </font>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>20</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>User Registration</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources/>

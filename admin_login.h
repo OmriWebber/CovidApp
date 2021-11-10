@@ -2,6 +2,7 @@
 #define ADMIN_LOGIN_H
 
 #include <QDialog>
+#include "admin_profile.h"
 
 namespace Ui {
 class AdminLogin;
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::AdminLogin *ui;
+    Admin_Profile *ap;
 };
 
 #endif // ADMIN_LOGIN_H

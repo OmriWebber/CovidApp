@@ -10,20 +10,29 @@ CONFIG += c++11
 
 SOURCES += \
     admin_login.cpp \
+    admin_profile.cpp \
     main.cpp \
     mainwindow.cpp \
     user.cpp \
+    user_login.cpp \
+    user_profile.cpp \
     user_registration.cpp
 
 HEADERS += \
     admin_login.h \
+    admin_profile.h \
     mainwindow.h \
     user.h \
+    user_login.h \
+    user_profile.h \
     user_registration.h
 
 FORMS += \
     admin_login.ui \
+    admin_profile.ui \
     mainwindow.ui \
+    user_login.ui \
+    user_profile.ui \
     user_registration.ui
 
 # Default rules for deployment.

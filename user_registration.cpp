@@ -1,5 +1,6 @@
 #include "user_registration.h"
 #include "ui_user_registration.h"
+#include "mainwindow.h"
 
 #include <QFile>
 #include <QTextStream>
@@ -10,12 +11,11 @@
 #include <QRandomGenerator>
 #include <QDebug>
 
-User_Registration::User_Registration(User*& newUser, QWidget *parent) :
+User_Registration::User_Registration(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::User_Registration)
 {
     ui->setupUi(this);
-    this->newUser = &newUser;
     ui->vaxStatus_box->setVisible(0);
 
     //registering the events
@@ -30,44 +30,41 @@ User_Registration::~User_Registration()
 
 void User_Registration::Register()
 {
+
     QString username = ui->input_username->text();
     QString password = ui->input_password->text();
     QString fullname = ui->input_fullname->text();
     QString Id = generateID();
-    QDate DOB = QDate(ui->input_dob_day->text().toInt(), ui->input_dob_month->text().toInt(), ui->input_dob_year->text().toInt());
+    QDate DOB = QDate(ui->input_dob_year->text().toInt(), ui->input_dob_month->text().toInt(), ui->input_dob_day->text().toInt());
     QString Address = ui->input_address->text();
     QString Phone = ui->input_phone->text();
-    QDate firstDose = QDate(ui->input_dob_day_2->text().toInt(), ui->input_dob_month_2->text().toInt(), ui->input_dob_year_2->text().toInt());
-    QDate secondDose = QDate(ui->input_dob_day_3->text().toInt(), ui->input_dob_month_3->text().toInt(), ui->input_dob_year_3->text().toInt());
+    QDate firstDose = QDate(ui->input_dob_year_2->text().toInt(), ui->input_dob_month_2->text().toInt(), ui->input_dob_day_2->text().toInt());
+    QDate secondDose = QDate(ui->input_dob_year_3->text().toInt(), ui->input_dob_month_3->text().toInt(), ui->input_dob_day_3->text().toInt());
     VaxStatus vStat = calcVaxStatus(firstDose, secondDose);
     QDate firstBoosterDate;
 
 
-    QFile userFile("out.txt");
+    QFile userFile("../CS106/user.txt");
     if(userFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
         QTextStream out(&userFile);
         out<<username<<",";
         out<<password<<",";
         out<<fullname<<",";
         out<<Id<<",";
-        out<<DOB.toString("dd/MM/yyyy")<<",";
+        out<<DOB.toString("dd.MM.yyyy")<<",";
         out<<Address<<",";
         out<<Phone<<",";
-        out<<firstDose.toString("dd/MM/yyyy")<<",";
-        out<<secondDose.toString("dd/MM/yyyy")<<",";
+        out<<firstDose.toString("dd.MM.yyyy")<<",";
+        out<<secondDose.toString("dd.MM.yyyy")<<",";
         out<<vStat<<",";
-        out<<firstBoosterDate.toString("dd/MM/yyyy")<<Qt::endl;
-        qDebug() << DOB.toString("dd/MM/yyyy");
+        out<<firstBoosterDate.toString("dd.MM.yyyy")<<Qt::endl;
+
+
+        hide();
+
+
     }
-
-
-
-
-   /*
-
-   */
-
-}//end confirmAdd
+}
 
 
 QString User_Registration::generateID(){

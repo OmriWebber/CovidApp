@@ -17,15 +17,16 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_userRegistration_clicked()
 {
     hide();
-    User *newUser;
-    ur= new User_Registration(newUser, this);
+    ur= new User_Registration(this);
     ur->show();
 }
 
 
 void MainWindow::on_pushButton_userLogin_clicked()
 {
-
+    hide();
+    ul= new user_login(this);
+    ul->show();
 }
 
 

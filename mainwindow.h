@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "user_login.h"
 #include "admin_login.h"
 #include "user_registration.h"
 #include "user.h"
@@ -30,5 +31,6 @@ private:
     Ui::MainWindow *ui;
     AdminLogin *al;
     User_Registration *ur;
+    user_login *ul;
 };
 #endif // MAINWINDOW_H

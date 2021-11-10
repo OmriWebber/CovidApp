@@ -1,31 +1,32 @@
-#include "admin_login.h"
-#include "ui_adminlogin.h"
+#include "user_login.h"
+#include "ui_user_login.h"
 
-#include<QMessageBox>
-
+#include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
 #include <QString>
-AdminLogin::AdminLogin(QWidget *parent) :
+#include <QDebug>
+
+user_login::user_login(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::AdminLogin)
+    ui(new Ui::user_login)
 {
     ui->setupUi(this);
 }
 
-AdminLogin::~AdminLogin()
+user_login::~user_login()
 {
     delete ui;
 }
 
-void AdminLogin::on_pushButton_login_clicked()
+void user_login::on_pushButton_login_clicked()
 {
-    QString username = ui->lineEdit_username->text();
-    QString password= ui->lineEdit_password->text();
+    QString username = ui->input_username->text();
+    QString password= ui->input_password->text();
     QString msg;
 
     //~~~~~~File code starts~~~~~~~~~~~~
-     QFile userFile("../CS106/admin.txt");
+     QFile userFile("../CS106/user.txt");
      userFile.open(QIODevice::ReadOnly | QIODevice::Text);
      QTextStream in(&userFile);
      //~~~~~~File code ends~~~~~~~~~~~~
@@ -34,13 +35,14 @@ void AdminLogin::on_pushButton_login_clicked()
      {
          QString line = in.readLine();
          QStringList data= line.split(",");
+         qDebug() << data.at(0) << data.at(1) << " : " << username << password;
 
             if(username==data.at(0) && password==data.at(1))
             {
                 msg = " You have successfully logged in!";
                 hide();
-                ap= new Admin_Profile(this);
-                ap->show();
+                up= new user_profile(this);
+                up->show();
                 break;
 
 
