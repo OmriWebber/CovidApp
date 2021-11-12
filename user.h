@@ -8,7 +8,8 @@ enum VaxStatus { NoDose, FirstDose, SecondDose, FirstBooster };
 class User
 {
 public:
-    User(QString username, QString password, QString name, QString id, QDate dob, QString address, QString phone, VaxStatus vstat, QDate firstDoseDate, QDate secondDoseDate, QDate firstBoosterDate);
+    User();
+    User(QString username, QString password, QString name, QString id, QString dob, QString address, QString phone, VaxStatus vstat, QString firstDoseDate, QString secondDoseDate, QString firstBoosterDate);
 
     void setUsername(QString username);
     QString getUsername() const;
@@ -22,8 +23,8 @@ public:
     void setId(QString id);
     QString getId() const;
 
-    void setDob(QDate dob);
-    QDate getDob() const;
+    void setDob(QString dob);
+    QString getDob() const;
 
     void setAddress(QString address);
     QString getAddress() const;
@@ -32,16 +33,16 @@ public:
     QString getPhone() const;
 
     void setVaxStatus(VaxStatus vstat);
-    VaxStatus setVaxStatus() const;
+    VaxStatus getVaxStatus() const;
 
-    void setFirstDoseDate(QDate firstDoseDate);
-    QDate getFirstDoseDate() const;
+    void setFirstDoseDate(QString firstDoseDate);
+    QString getFirstDoseDate() const;
 
-    void setSecondDoseDate(QDate secondDoseDate);
-    QDate getSecondDoseDate() const;
+    void setSecondDoseDate(QString secondDoseDate);
+    QString getSecondDoseDate() const;
 
-    void setFirstBoosterDate(QDate firstBoosterDate);
-    QDate getFirstBoosterDate() const;
+    void setFirstBoosterDate(QString firstBoosterDate);
+    QString getFirstBoosterDate() const;
 
 
 
@@ -50,13 +51,13 @@ private:
     QString password;
     QString name;
     QString id;
-    QDate dob;
+    QString dob;
     QString address;
     QString phone;
     VaxStatus vstat;
-    QDate firstDoseDate;
-    QDate secondDoseDate;
-    QDate firstBoosterDate;
+    QString firstDoseDate;
+    QString secondDoseDate;
+    QString firstBoosterDate;
 };
 
 #endif // USER_H

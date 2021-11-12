@@ -5,6 +5,7 @@
 #include "user.h"
 #include "user_profile.h"
 
+VaxStatus convertStringToVaxStatus(QString status);
 
 namespace Ui {
 class user_login;
@@ -17,8 +18,6 @@ class user_login : public QDialog
 public:
     explicit user_login(QWidget *parent = nullptr);
     ~user_login();
-
-    User *currentUser;
 
 private slots:
     void on_pushButton_login_clicked();

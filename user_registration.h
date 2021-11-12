@@ -26,7 +26,6 @@ private slots:
 
 private:
     Ui::User_Registration *ui;
-    QString imageFilePath;
 };
 
 #endif // USER_REGISTRATION_H

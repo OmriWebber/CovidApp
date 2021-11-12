@@ -60,8 +60,9 @@ void User_Registration::Register()
         out<<firstBoosterDate.toString("dd.MM.yyyy")<<Qt::endl;
 
 
-        hide();
-
+        this->hide();
+        QWidget *parent = this->parentWidget();
+        parent->show();
 
     }
 }

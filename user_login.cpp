@@ -1,5 +1,6 @@
 #include "user_login.h"
 #include "ui_user_login.h"
+#include "user.h"
 
 #include <QMessageBox>
 #include <QFile>
@@ -35,13 +36,13 @@ void user_login::on_pushButton_login_clicked()
      {
          QString line = in.readLine();
          QStringList data= line.split(",");
-         qDebug() << data.at(0) << data.at(1) << " : " << username << password;
 
             if(username==data.at(0) && password==data.at(1))
             {
+                User currentUser(data.at(0),data.at(1),data.at(2),data.at(3),data.at(4),data.at(5),data.at(6),convertStringToVaxStatus(data.at(9)),data.at(7),data.at(8),data.at(10));
                 msg = " You have successfully logged in!";
                 hide();
-                up= new user_profile(this);
+                up= new user_profile(currentUser, this);
                 up->show();
                 break;
 
@@ -53,7 +54,19 @@ void user_login::on_pushButton_login_clicked()
 
             }
      }
+}
 
-     QMessageBox::information(this,"Login",msg);
+VaxStatus convertStringToVaxStatus(QString status){
+    if(status == "0") {
+        return NoDose;
+    } else if(status == "1"){
+        return FirstDose;
+    } else if (status == "2") {
+        return SecondDose;
+    } else if (status == "3") {
+        return FirstBooster;
+    } else {
+        return NoDose;
+    }
 }
 

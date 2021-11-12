@@ -13,8 +13,10 @@ class user_profile : public QDialog
     Q_OBJECT
 
 public:
-    explicit user_profile(QWidget *parent = nullptr);
+    explicit user_profile(User currentUser, QWidget *parent = nullptr);
     ~user_profile();
+
+private slots:
 
 private:
     Ui::user_profile *ui;
