@@ -22,6 +22,8 @@ public:
 private slots:
     void on_pushButton_login_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::user_login *ui;
     user_profile *up;

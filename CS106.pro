@@ -1,4 +1,5 @@
 QT       += core gui
+QT += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,6 +14,7 @@ SOURCES += \
     admin_profile.cpp \
     main.cpp \
     mainwindow.cpp \
+    qrdownloader.cpp \
     user.cpp \
     user_login.cpp \
     user_profile.cpp \
@@ -22,6 +24,7 @@ HEADERS += \
     admin_login.h \
     admin_profile.h \
     mainwindow.h \
+    qrdownloader.h \
     user.h \
     user_login.h \
     user_profile.h \

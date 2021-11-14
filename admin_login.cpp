@@ -42,8 +42,6 @@ void AdminLogin::on_pushButton_login_clicked()
                 ap= new Admin_Profile(this);
                 ap->show();
                 break;
-
-
             }
             else
             {
