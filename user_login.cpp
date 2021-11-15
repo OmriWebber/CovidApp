@@ -45,13 +45,10 @@ void user_login::on_pushButton_login_clicked()
                 up= new user_profile(currentUser, this);
                 up->show();
                 break;
-
-
             }
             else
             {
                 msg = "Wrong username or password!";
-
             }
      }
 }

@@ -1,9 +1,6 @@
 #include "user_profile.h"
 #include "ui_user_profile.h"
 
-
-
-
 user_profile::user_profile(User currentUser, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::user_profile)
@@ -82,8 +79,7 @@ user_profile::~user_profile()
     delete ui;
 }
 
-void user_profile::on_pushButton_finishEdit_clicked()
-{
+void user_profile::on_pushButton_finishEdit_clicked() {
     ui->groupBox_edit->setVisible(0);
     ui->pushButton_finishEdit->setVisible(0);
     ui->groupBox->setVisible(1);
@@ -91,8 +87,7 @@ void user_profile::on_pushButton_finishEdit_clicked()
 }
 
 
-void user_profile::on_pushButton_edit_clicked()
-{
+void user_profile::on_pushButton_edit_clicked() {
     ui->groupBox->setVisible(0);
     ui->pushButton_edit->setVisible(0);
     ui->groupBox_edit->setVisible(1);
@@ -100,19 +95,19 @@ void user_profile::on_pushButton_edit_clicked()
 }
 
 
-void user_profile::on_pushButton_logout_clicked()
-{
+void user_profile::on_pushButton_logout_clicked() {
     this->hide();
     QWidget *parent = this->parentWidget();
     parent->show();
 }
 
 // Load QR Code into label
-void user_profile::loadImage()
-{
-    QPixmap buttonImage;
-    buttonImage.loadFromData(m_pImgCtrl->downloadedData());
-    qDebug() << buttonImage;
-    ui->label_qrcode->setPixmap(buttonImage);
-    ui->label_qrcode_2->setPixmap(buttonImage);
+void user_profile::loadImage() {
+    QPixmap qrCodeImage;
+    qrCodeImage.loadFromData(m_pImgCtrl->downloadedData());
+    ui->label_qrcode->setPixmap(qrCodeImage);
+    ui->label_qrcode_2->setPixmap(qrCodeImage);
 }
+
+
+// Add report issues section

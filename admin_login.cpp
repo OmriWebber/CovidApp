@@ -1,5 +1,5 @@
 #include "admin_login.h"
-#include "ui_adminlogin.h"
+#include "ui_admin_login.h"
 
 #include<QMessageBox>
 
@@ -46,10 +46,7 @@ void AdminLogin::on_pushButton_login_clicked()
             else
             {
                 msg = "Wrong username or password!";
-
             }
      }
-
-     QMessageBox::information(this,"Login",msg);
 }
 

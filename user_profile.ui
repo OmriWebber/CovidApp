@@ -731,12 +731,26 @@ color:black;</string>
     <string>Finish Editing</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>390</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View Tests</string>
+   </property>
+  </widget>
   <zorder>groupBox</zorder>
   <zorder>pushButton_finishEdit</zorder>
   <zorder>label_title</zorder>
   <zorder>pushButton_logout</zorder>
   <zorder>pushButton_edit</zorder>
   <zorder>groupBox_edit</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>
