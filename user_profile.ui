@@ -744,6 +744,32 @@ color:black;</string>
     <string>View Tests</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_Book">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>390</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Book Vaccine</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>390</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Get Tested</string>
+   </property>
+  </widget>
   <zorder>groupBox</zorder>
   <zorder>pushButton_finishEdit</zorder>
   <zorder>label_title</zorder>
@@ -751,6 +777,8 @@ color:black;</string>
   <zorder>pushButton_edit</zorder>
   <zorder>groupBox_edit</zorder>
   <zorder>pushButton</zorder>
+  <zorder>pushButton_Book</zorder>
+  <zorder>pushButton_3</zorder>
  </widget>
  <resources/>
  <connections/>

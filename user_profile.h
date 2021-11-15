@@ -5,7 +5,8 @@
 #include "user.h"
 
 #include "qrdownloader.h"
-
+#include <QUrl>
+#include <QDesktopServices>
 
 namespace Ui {
 class user_profile;
@@ -28,6 +29,12 @@ private slots:
     void on_pushButton_logout_clicked();
 
     void loadImage();
+
+
+
+    void on_pushButton_Book_clicked();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::user_profile *ui;

@@ -111,3 +111,18 @@ void user_profile::loadImage() {
 
 
 // Add report issues section
+
+
+
+
+void user_profile::on_pushButton_Book_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://bookmyvaccine.covid19.health.nz/", QUrl::TolerantMode));
+}
+
+
+void user_profile::on_pushButton_3_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://www.healthpoint.co.nz/covid-19/", QUrl::TolerantMode));
+}
+
