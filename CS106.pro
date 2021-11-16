@@ -18,7 +18,9 @@ SOURCES += \
     user.cpp \
     user_login.cpp \
     user_profile.cpp \
-    user_registration.cpp
+    user_registration.cpp \
+    user_report.cpp \
+    user_test_record.cpp
 
 HEADERS += \
     admin_login.h \
@@ -28,7 +30,9 @@ HEADERS += \
     user.h \
     user_login.h \
     user_profile.h \
-    user_registration.h
+    user_registration.h \
+    user_report.h \
+    user_test_record.h
 
 FORMS += \
     admin_login.ui \
@@ -36,7 +40,9 @@ FORMS += \
     mainwindow.ui \
     user_login.ui \
     user_profile.ui \
-    user_registration.ui
+    user_registration.ui \
+    user_report.ui \
+    user_test_record.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -45,4 +51,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     admin.txt \
+    reportFile.txt \
+    testRecord.txt \
     user.txt

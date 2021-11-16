@@ -1,6 +1,7 @@
 #ifndef ADMIN_PROFILE_H
 #define ADMIN_PROFILE_H
 
+#include "user.h"
 #include <QDialog>
 
 namespace Ui {
@@ -29,5 +30,7 @@ private slots:
 private:
     Ui::Admin_Profile *ui;
 };
+
+QString getVaxStatus(QString vStat);
 
 #endif // ADMIN_PROFILE_H

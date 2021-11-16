@@ -70,7 +70,7 @@
     <rect>
      <x>0</x>
      <y>70</y>
-     <width>771</width>
+     <width>781</width>
      <height>401</height>
     </rect>
    </property>
@@ -81,7 +81,7 @@
     <widget class="QPushButton" name="pushButton_userReports">
      <property name="geometry">
       <rect>
-       <x>340</x>
+       <x>330</x>
        <y>100</y>
        <width>101</width>
        <height>91</height>
@@ -94,7 +94,7 @@
     <widget class="QPushButton" name="pushButton_log">
      <property name="geometry">
       <rect>
-       <x>480</x>
+       <x>470</x>
        <y>100</y>
        <width>101</width>
        <height>91</height>
@@ -107,7 +107,7 @@
     <widget class="QPushButton" name="pushButton_users">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>190</x>
        <y>100</y>
        <width>101</width>
        <height>91</height>
@@ -148,20 +148,23 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>769</width>
+          <width>779</width>
           <height>394</height>
          </rect>
         </property>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
-           <x>-1</x>
-           <y>-1</y>
-           <width>771</width>
-           <height>401</height>
+           <x>20</x>
+           <y>0</y>
+           <width>731</width>
+           <height>391</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetNoConstraint</enum>
+          </property>
           <property name="fieldGrowthPolicy">
            <enum>QFormLayout::ExpandingFieldsGrow</enum>
           </property>
@@ -174,96 +177,6 @@
           <property name="verticalSpacing">
            <number>5</number>
           </property>
-          <item row="0" column="0" colspan="2">
-           <widget class="QFrame" name="listItem_template">
-            <layout class="QGridLayout" name="gridLayout_3">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_name">
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Fullname</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="label_dob">
-               <property name="text">
-                <string>DOB:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_phone">
-               <property name="text">
-                <string>Phone: </string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3" rowspan="3">
-              <widget class="QPushButton" name="pushButton_edit">
-               <property name="minimumSize">
-                <size>
-                 <width>80</width>
-                 <height>10</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>80</width>
-                 <height>60</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>Edit</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLabel" name="label_email">
-               <property name="text">
-                <string>Email:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2">
-              <widget class="QLabel" name="label_vax_status">
-               <property name="text">
-                <string>Vaccination Status:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0" colspan="2">
-              <widget class="QLabel" name="label_id">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>ID: </string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="2">
-              <widget class="QLabel" name="label_test_count">
-               <property name="text">
-                <string>Test Count:</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
          </layout>
         </widget>
        </widget>

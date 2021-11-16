@@ -5,6 +5,8 @@
 #include "user.h"
 
 #include "qrdownloader.h"
+#include "user_report.h"
+#include "user_test_record.h"
 #include <QUrl>
 #include <QDesktopServices>
 
@@ -34,11 +36,17 @@ private slots:
 
     void on_pushButton_Book_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_pushButton_getTested_clicked();
+
+    void on_pushButton_reportIssue_clicked();
+
+    void on_pushButton_viewTests_clicked();
 
 private:
     Ui::user_profile *ui;
     qrdownloader *m_pImgCtrl;
+    user_report *uReport;
+    user_testRecord *uTest;
 };
 
 #endif // USER_PROFILE_H

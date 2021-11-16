@@ -19,6 +19,8 @@ public:
 private slots:
     void on_pushButton_login_clicked();
 
+    void on_pushButton_goback_clicked();
+
 private:
     Ui::AdminLogin *ui;
     Admin_Profile *ap;

@@ -731,10 +731,10 @@ color:black;</string>
     <string>Finish Editing</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_viewTests">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>350</x>
      <y>390</y>
      <width>91</width>
      <height>31</height>
@@ -757,7 +757,7 @@ color:black;</string>
     <string>Book Vaccine</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButton_getTested">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -770,15 +770,29 @@ color:black;</string>
     <string>Get Tested</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_reportIssue">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>390</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Report Issue</string>
+   </property>
+  </widget>
   <zorder>groupBox</zorder>
   <zorder>pushButton_finishEdit</zorder>
   <zorder>label_title</zorder>
   <zorder>pushButton_logout</zorder>
   <zorder>pushButton_edit</zorder>
   <zorder>groupBox_edit</zorder>
-  <zorder>pushButton</zorder>
+  <zorder>pushButton_viewTests</zorder>
   <zorder>pushButton_Book</zorder>
-  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_getTested</zorder>
+  <zorder>pushButton_reportIssue</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -121,8 +121,24 @@ void user_profile::on_pushButton_Book_clicked()
 }
 
 
-void user_profile::on_pushButton_3_clicked()
+void user_profile::on_pushButton_getTested_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://www.healthpoint.co.nz/covid-19/", QUrl::TolerantMode));
+}
+
+
+void user_profile::on_pushButton_reportIssue_clicked()
+{
+    hide();
+    uReport = new user_report(this);
+    uReport->show();
+}
+
+
+void user_profile::on_pushButton_viewTests_clicked()
+{
+    hide();
+    uTest = new user_testRecord(this);
+    uTest->show();
 }
 

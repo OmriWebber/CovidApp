@@ -1,7 +1,7 @@
 #include "admin_login.h"
 #include "ui_admin_login.h"
 
-#include<QMessageBox>
+#include <QMessageBox>
 
 #include <QFile>
 #include <QTextStream>
@@ -48,5 +48,13 @@ void AdminLogin::on_pushButton_login_clicked()
                 msg = "Wrong username or password!";
             }
      }
+}
+
+
+void AdminLogin::on_pushButton_goback_clicked()
+{
+    this->hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
 }
 

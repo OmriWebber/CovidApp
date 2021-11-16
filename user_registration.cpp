@@ -103,3 +103,11 @@ VaxStatus User_Registration::calcVaxStatus(QDate firstDose, QDate secondDose){
     }
 }
 
+
+void User_Registration::on_pushButton_clicked()
+{
+    this->hide();
+    QWidget *parent = this->parentWidget();
+    parent->show();
+}
+
