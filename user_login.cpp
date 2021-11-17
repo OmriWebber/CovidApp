@@ -41,6 +41,14 @@ void user_login::on_pushButton_login_clicked()
             {
                 User currentUser(data.at(0),data.at(1),data.at(2),data.at(3),data.at(4),data.at(5),data.at(6),convertStringToVaxStatus(data.at(9)),data.at(7),data.at(8),data.at(10));
                 msg = " You have successfully logged in!";
+
+                QDateTime currentTime = QDateTime::currentDateTime();
+                QFile logFile("../CS106/log.txt");
+                if(logFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
+                    QTextStream log(&logFile);
+                    log<<currentTime.toString()<<" " << username << " logged in as a user" << "\n";
+                }
+
                 hide();
                 up= new user_profile(currentUser, this);
                 up->show();

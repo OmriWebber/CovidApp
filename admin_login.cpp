@@ -38,6 +38,14 @@ void AdminLogin::on_pushButton_login_clicked()
             if(username==data.at(0) && password==data.at(1))
             {
                 msg = " You have successfully logged in!";
+
+                QDateTime currentTime = QDateTime::currentDateTime();
+                QFile logFile("../CS106/log.txt");
+                if(logFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
+                    QTextStream log(&logFile);
+                    log<<currentTime.toString()<<" " << username << " logged in as an admin";
+                }
+
                 hide();
                 ap= new Admin_Profile(this);
                 ap->show();

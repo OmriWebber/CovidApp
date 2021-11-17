@@ -27,6 +27,12 @@ private slots:
 
     void on_stackedWidget_currentChanged(int arg1);
 
+    void on_pushButton_goBack_clicked();
+
+    void on_pushButton_goBack_2_clicked();
+
+    void on_pushButton_goBack_3_clicked();
+
 private:
     Ui::Admin_Profile *ui;
 };

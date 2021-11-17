@@ -788,11 +788,11 @@ color:black;</string>
   <zorder>label_title</zorder>
   <zorder>pushButton_logout</zorder>
   <zorder>pushButton_edit</zorder>
-  <zorder>groupBox_edit</zorder>
   <zorder>pushButton_viewTests</zorder>
   <zorder>pushButton_Book</zorder>
   <zorder>pushButton_getTested</zorder>
   <zorder>pushButton_reportIssue</zorder>
+  <zorder>groupBox_edit</zorder>
  </widget>
  <resources/>
  <connections/>

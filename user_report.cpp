@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
+#include <QDateTime>
 
 user_report::user_report(QWidget *parent) :
     QDialog(parent),
@@ -49,6 +50,16 @@ void user_report::on_pushButton_submit_clicked() // submit textEdit to report fi
 
         QTextStream out(&reportFile); // passing file obj by reference
         out<<report<<" , "; // writing string obj to file --space comma space separation
+
+        // Log Event
+        QDateTime currentTime = QDateTime::currentDateTime();
+        QFile logFile("../CS106/log.txt");
+        if(logFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
+            QTextStream log(&logFile);
+            log<<currentTime.toString()<<" Issue reported by user" << "\n";
+        }
+
+
         reportFile.flush(); // flushing buffer
         reportFile.close(); // closing file after handling
         QMessageBox::information(this, "Success", "Report has been submitted successfully"); // display 'successfule file write' message

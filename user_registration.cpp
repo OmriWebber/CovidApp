@@ -59,6 +59,12 @@ void User_Registration::Register()
         out<<vStat<<",";
         out<<firstBoosterDate.toString("dd.MM.yyyy")<<Qt::endl;
 
+        QDateTime currentTime = QDateTime::currentDateTime();
+        QFile logFile("../CS106/log.txt");
+        if(logFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
+            QTextStream log(&logFile);
+            log<<currentTime.toString()<<" New user registered";
+        }
 
         this->hide();
         QWidget *parent = this->parentWidget();
@@ -104,7 +110,7 @@ VaxStatus User_Registration::calcVaxStatus(QDate firstDose, QDate secondDose){
 }
 
 
-void User_Registration::on_pushButton_clicked()
+void User_Registration::on_pushButton_goBack_clicked()
 {
     this->hide();
     QWidget *parent = this->parentWidget();

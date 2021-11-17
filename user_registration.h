@@ -24,7 +24,7 @@ public:
 private slots:
     void on_checkBox_stateChanged(int arg1);
 
-    void on_pushButton_clicked();
+    void on_pushButton_goBack_clicked();
 
 private:
     Ui::User_Registration *ui;

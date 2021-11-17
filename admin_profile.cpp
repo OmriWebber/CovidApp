@@ -37,6 +37,21 @@ void Admin_Profile::on_pushButton_log_clicked()
     ui->stackedWidget->setCurrentIndex(3);
 }
 
+void Admin_Profile::on_pushButton_goBack_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void Admin_Profile::on_pushButton_goBack_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void Admin_Profile::on_pushButton_goBack_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
 void Admin_Profile::on_pushButton_logout_clicked()
 {
     this->hide();
@@ -56,11 +71,12 @@ void Admin_Profile::on_stackedWidget_currentChanged(int arg1)
         QTextStream userIn(&userFile);
 
         QFormLayout *layout = qobject_cast<QFormLayout*>(ui->formLayout->layout());
-        layout->setVerticalSpacing(10);
+
         while(!userIn.atEnd())
         {
             QString line = userIn.readLine();
             QStringList data= line.split(",");
+
 
             QString name = data.at(2);
             QString id = "ID: " + data.at(3);
@@ -69,9 +85,11 @@ void Admin_Profile::on_stackedWidget_currentChanged(int arg1)
             QString phone = "Phone: " + data.at(6);
             QString vaxStatus = "Vaccination Status: " + getVaxStatus(data.at(9));
 
+
             QGridLayout *newListItem = new QGridLayout();
+
+
             newListItem->addWidget(new QLabel(name),0,0);
-            newListItem->addWidget(new QLabel(id),2,0,1,2);
             newListItem->addWidget(new QLabel(dob),0,1);
             newListItem->addWidget(new QLabel(email),1,1);
             newListItem->addWidget(new QLabel(phone),0,2);
@@ -81,20 +99,45 @@ void Admin_Profile::on_stackedWidget_currentChanged(int arg1)
             editButton->setMinimumWidth(80);
             editButton->setMaximumHeight(60);
             editButton->setMaximumWidth(80);
-            newListItem->addWidget(editButton,0,3);
+            newListItem->addWidget(editButton,1,3);
             QFrame *border = new QFrame;
             border->setMaximumHeight(2);
+            border->setMinimumHeight(2);
             border->setStyleSheet("QFrame{border: 1px solid black;}");
             newListItem->addWidget(border,3,0,1,4);
-
 
             layout->addRow(newListItem);
         }
 
     } else if (arg1 == 2) {
+        QFile reportFile("../CS106/reportFile.txt");
+        reportFile.open(QIODevice::ReadOnly | QIODevice::Text);
+        QTextStream reportIn(&reportFile);
+        int i = 0;
+
+        while(!reportIn.atEnd()) {
+            i++;
+            QString index = QString::number(i);
+            QString line = reportIn.readLine();
+            QString issue = "Issue #" + index + ": " + line;
+
+            ui->reports->append(issue + "\n");
+        }
+
+        reportFile.close();
 
     } else if (arg1 == 3) {
+        QFile logFile("../CS106/log.txt");
+        logFile.open(QIODevice::ReadOnly | QIODevice::Text);
+        QTextStream logIn(&logFile);
 
+        while(!logIn.atEnd()) {
+            QString line = logIn.readLine();
+
+            ui->log->append(line + "\n");
+        }
+
+        logFile.close();
     } else if (arg1 == 4) {
 
     } else if (arg1 == 5) {
@@ -123,4 +166,13 @@ QString getVaxStatus(QString status){
         return "No Dose";
     }
 }
+
+
+
+
+
+
+
+
+
 

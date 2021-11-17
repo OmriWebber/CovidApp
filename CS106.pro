@@ -51,6 +51,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     admin.txt \
+    log.txt \
     reportFile.txt \
     testRecord.txt \
     user.txt
